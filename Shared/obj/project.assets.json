@@ -2,53 +2,86 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "Grpc.Core.Api/2.51.0": {
+      "Grpc.AspNetCore.Server/2.34.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Net.Common": "2.34.0"
+        },
+        "compile": {
+          "lib/net5.0/Grpc.AspNetCore.Server.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Grpc.AspNetCore.Server.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Grpc.Core.Api/2.35.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+          "lib/netstandard2.0/Grpc.Core.Api.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+          "lib/netstandard2.0/Grpc.Core.Api.dll": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Grpc.Net.Client/2.51.0": {
+      "Grpc.Net.Client/2.34.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Net.Common": "2.51.0",
-          "Microsoft.Extensions.Logging.Abstractions": "3.0.3"
+          "Grpc.Net.Common": "2.34.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.0.3",
+          "System.Diagnostics.DiagnosticSource": "4.5.1"
         },
         "compile": {
-          "lib/net7.0/Grpc.Net.Client.dll": {
+          "lib/net5.0/Grpc.Net.Client.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Grpc.Net.Client.dll": {
+          "lib/net5.0/Grpc.Net.Client.dll": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Grpc.Net.Common/2.51.0": {
+      "Grpc.Net.Common/2.34.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Core.Api": "2.51.0"
+          "Grpc.Core.Api": "2.34.0"
         },
         "compile": {
-          "lib/net7.0/Grpc.Net.Common.dll": {
+          "lib/net5.0/Grpc.Net.Common.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Grpc.Net.Common.dll": {
+          "lib/net5.0/Grpc.Net.Common.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "MagicOnion/5.1.2": {
+        "type": "package",
+        "dependencies": {
+          "MagicOnion.Client": "5.1.2",
+          "MagicOnion.Server": "5.1.2"
+        },
+        "compile": {
+          "lib/net7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net7.0/_._": {}
         }
       },
       "MagicOnion.Abstractions/5.1.2": {
@@ -82,6 +115,25 @@
         },
         "runtime": {
           "lib/net7.0/MagicOnion.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MagicOnion.Server/5.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.34.0",
+          "Grpc.Core.Api": "2.35.0",
+          "MagicOnion.Abstractions": "5.1.2",
+          "MagicOnion.Shared": "5.1.2"
+        },
+        "compile": {
+          "lib/net7.0/MagicOnion.Server.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/MagicOnion.Server.dll": {
             "related": ".xml"
           }
         }
@@ -176,6 +228,19 @@
           }
         }
       },
+      "System.Diagnostics.DiagnosticSource/4.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Memory/4.5.3": {
         "type": "package",
         "compile": {
@@ -228,84 +293,92 @@
     }
   },
   "libraries": {
-    "Grpc.Core.Api/2.51.0": {
-      "sha512": "WUYCnxZKfdBWCKNs08lWFRoTjESt3iyFDthsZu5KcWguZ4OnnXrTu/K5mIdO+R9dUhuw5Xm1ygUrI1e2q8d1YA==",
+    "Grpc.AspNetCore.Server/2.34.0": {
+      "sha512": "V937xHNfIQM6X2dx8ManMK+xfkjmxwVfL/kWa+kZiLnf4E0VYd/A2ocrKDnn7EQk7SV2tkCD1+fUsG3qRsKNmQ==",
       "type": "package",
-      "path": "grpc.core.api/2.51.0",
+      "path": "grpc.aspnetcore.server/2.34.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "grpc.core.api.2.51.0.nupkg.sha512",
+        "grpc.aspnetcore.server.2.34.0.nupkg.sha512",
+        "grpc.aspnetcore.server.nuspec",
+        "lib/net5.0/Grpc.AspNetCore.Server.dll",
+        "lib/net5.0/Grpc.AspNetCore.Server.pdb",
+        "lib/net5.0/Grpc.AspNetCore.Server.xml",
+        "lib/netcoreapp3.0/Grpc.AspNetCore.Server.dll",
+        "lib/netcoreapp3.0/Grpc.AspNetCore.Server.pdb",
+        "lib/netcoreapp3.0/Grpc.AspNetCore.Server.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Core.Api/2.35.0": {
+      "sha512": "3ZpDzd5iMRBUv22hcvBqhL1yFFNfa9AccG8koco0ezbO/NMt3E0GsTf1BeIZ2G6ceFZR3fEMawpiJAlXhDEpQA==",
+      "type": "package",
+      "path": "grpc.core.api/2.35.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grpc.core.api.2.35.0.nupkg.sha512",
         "grpc.core.api.nuspec",
-        "lib/net462/Grpc.Core.Api.dll",
-        "lib/net462/Grpc.Core.Api.pdb",
-        "lib/net462/Grpc.Core.Api.xml",
+        "lib/net45/Grpc.Core.Api.dll",
+        "lib/net45/Grpc.Core.Api.pdb",
+        "lib/net45/Grpc.Core.Api.xml",
         "lib/netstandard1.5/Grpc.Core.Api.dll",
         "lib/netstandard1.5/Grpc.Core.Api.pdb",
         "lib/netstandard1.5/Grpc.Core.Api.xml",
         "lib/netstandard2.0/Grpc.Core.Api.dll",
         "lib/netstandard2.0/Grpc.Core.Api.pdb",
-        "lib/netstandard2.0/Grpc.Core.Api.xml",
-        "lib/netstandard2.1/Grpc.Core.Api.dll",
-        "lib/netstandard2.1/Grpc.Core.Api.pdb",
-        "lib/netstandard2.1/Grpc.Core.Api.xml",
-        "packageIcon.png"
+        "lib/netstandard2.0/Grpc.Core.Api.xml"
       ]
     },
-    "Grpc.Net.Client/2.51.0": {
-      "sha512": "6XybyqUGn5+8UTMRKAfbM+aXagR3qxHROIEeFyul5gvh/dF3UqpnpnTkcRKIae4n5+Bt8j1J1VdNqYyEvYoYyg==",
+    "Grpc.Net.Client/2.34.0": {
+      "sha512": "UJkhLPa80jR0G6VsZmmSbKQBsvmxKPY+N2UvN/cEWZXezboRoSyk8h4Yb3t/BEHsRkjNhMqw4UPpr2INUK1HlA==",
       "type": "package",
-      "path": "grpc.net.client/2.51.0",
+      "path": "grpc.net.client/2.34.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "grpc.net.client.2.51.0.nupkg.sha512",
+        "grpc.net.client.2.34.0.nupkg.sha512",
         "grpc.net.client.nuspec",
         "lib/net5.0/Grpc.Net.Client.dll",
         "lib/net5.0/Grpc.Net.Client.pdb",
         "lib/net5.0/Grpc.Net.Client.xml",
-        "lib/net6.0/Grpc.Net.Client.dll",
-        "lib/net6.0/Grpc.Net.Client.pdb",
-        "lib/net6.0/Grpc.Net.Client.xml",
-        "lib/net7.0/Grpc.Net.Client.dll",
-        "lib/net7.0/Grpc.Net.Client.pdb",
-        "lib/net7.0/Grpc.Net.Client.xml",
-        "lib/netstandard2.0/Grpc.Net.Client.dll",
-        "lib/netstandard2.0/Grpc.Net.Client.pdb",
-        "lib/netstandard2.0/Grpc.Net.Client.xml",
         "lib/netstandard2.1/Grpc.Net.Client.dll",
         "lib/netstandard2.1/Grpc.Net.Client.pdb",
         "lib/netstandard2.1/Grpc.Net.Client.xml",
         "packageIcon.png"
       ]
     },
-    "Grpc.Net.Common/2.51.0": {
-      "sha512": "lAymSKjOHFopWt7RAF/Rxkf7SKGZaj+tJdabcnobm6XkdHX1zIQdkByeqIwmJesDbbCTpLEae6oSrn4eWWE9TQ==",
+    "Grpc.Net.Common/2.34.0": {
+      "sha512": "dxVKzogjSejTV0hGeL61fmw6BSzF5uW4PBDWnx8LJFn41drgIPIXOoCJVqSAZ39lkGjTZlxtcwV5Vy6zqTf5Gw==",
       "type": "package",
-      "path": "grpc.net.common/2.51.0",
+      "path": "grpc.net.common/2.34.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "grpc.net.common.2.51.0.nupkg.sha512",
+        "grpc.net.common.2.34.0.nupkg.sha512",
         "grpc.net.common.nuspec",
         "lib/net5.0/Grpc.Net.Common.dll",
         "lib/net5.0/Grpc.Net.Common.pdb",
         "lib/net5.0/Grpc.Net.Common.xml",
-        "lib/net6.0/Grpc.Net.Common.dll",
-        "lib/net6.0/Grpc.Net.Common.pdb",
-        "lib/net6.0/Grpc.Net.Common.xml",
-        "lib/net7.0/Grpc.Net.Common.dll",
-        "lib/net7.0/Grpc.Net.Common.pdb",
-        "lib/net7.0/Grpc.Net.Common.xml",
-        "lib/netstandard2.0/Grpc.Net.Common.dll",
-        "lib/netstandard2.0/Grpc.Net.Common.pdb",
-        "lib/netstandard2.0/Grpc.Net.Common.xml",
         "lib/netstandard2.1/Grpc.Net.Common.dll",
         "lib/netstandard2.1/Grpc.Net.Common.pdb",
         "lib/netstandard2.1/Grpc.Net.Common.xml",
         "packageIcon.png"
+      ]
+    },
+    "MagicOnion/5.1.2": {
+      "sha512": "lKclxvf3Dw+2UQBgrkOSA5ml1P/dsnxAyUYiw9KRiDrgeWv2n31rE1Los6Q2VpsmdHiqnNRoGgReZstbChXG0g==",
+      "type": "package",
+      "path": "magiconion/5.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/_._",
+        "lib/net7.0/_._",
+        "magiconion.5.1.2.nupkg.sha512",
+        "magiconion.nuspec"
       ]
     },
     "MagicOnion.Abstractions/5.1.2": {
@@ -340,6 +413,22 @@
         "lib/netstandard2.1/MagicOnion.Client.xml",
         "magiconion.client.5.1.2.nupkg.sha512",
         "magiconion.client.nuspec"
+      ]
+    },
+    "MagicOnion.Server/5.1.2": {
+      "sha512": "jQ1bIUVEovA4C/gm4U+05sAzWdU7PJk35hhLTU8LmzN8RGzr9fr/2ck+tOxX0/VYd/B/tyNKrDq5XCHDv2X0Ew==",
+      "type": "package",
+      "path": "magiconion.server/5.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/MagicOnion.Server.dll",
+        "lib/net6.0/MagicOnion.Server.xml",
+        "lib/net7.0/MagicOnion.Server.dll",
+        "lib/net7.0/MagicOnion.Server.xml",
+        "magiconion.server.5.1.2.nupkg.sha512",
+        "magiconion.server.nuspec"
       ]
     },
     "MagicOnion.Shared/5.1.2": {
@@ -443,6 +532,31 @@
         "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml",
         "system.collections.immutable.1.5.0.nupkg.sha512",
         "system.collections.immutable.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Diagnostics.DiagnosticSource/4.5.1": {
+      "sha512": "zCno/m44ymWhgLFh7tELDG9587q0l/EynPM0m4KgLaWQbz/TEKvNRX2YT5ip2qXW/uayifQ2ZqbnErsKJ4lYrQ==",
+      "type": "package",
+      "path": "system.diagnostics.diagnosticsource/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net45/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net46/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net46/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
+        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
+        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
+        "system.diagnostics.diagnosticsource.4.5.1.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -635,8 +749,8 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Grpc.Net.Client >= 2.51.0",
-      "MagicOnion.Client >= 5.1.2"
+      "MagicOnion >= 5.1.2",
+      "MagicOnion.Server >= 5.1.2"
     ]
   },
   "packageFolders": {
@@ -646,11 +760,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\simil\\GitProject\\TodoApi\\ClientConsole\\ClientConsole.csproj",
-      "projectName": "ClientConsole",
-      "projectPath": "C:\\Users\\simil\\GitProject\\TodoApi\\ClientConsole\\ClientConsole.csproj",
+      "projectUniqueName": "C:\\Users\\simil\\GitProject\\TodoApi\\Shared\\Shared.csproj",
+      "projectName": "Shared",
+      "projectPath": "C:\\Users\\simil\\GitProject\\TodoApi\\Shared\\Shared.csproj",
       "packagesPath": "C:\\Users\\simil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\simil\\GitProject\\TodoApi\\ClientConsole\\obj\\",
+      "outputPath": "C:\\Users\\simil\\GitProject\\TodoApi\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -683,11 +797,11 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
-          "Grpc.Net.Client": {
+          "MagicOnion": {
             "target": "Package",
-            "version": "[2.51.0, )"
+            "version": "[5.1.2, )"
           },
-          "MagicOnion.Client": {
+          "MagicOnion.Server": {
             "target": "Package",
             "version": "[5.1.2, )"
           }
