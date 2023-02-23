@@ -11,7 +11,8 @@
           "Grpc.AspNetCore": "2.51.0",
           "MagicOnion.Server": "5.1.2",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "7.0.3",
-          "Microsoft.EntityFrameworkCore.InMemory": "7.0.3"
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.3",
+          "Shared": "1.0.0"
         },
         "runtime": {
           "TodoApi.dll": {}
@@ -102,6 +103,12 @@
         }
       },
       "Grpc.Tools/2.51.0": {},
+      "MagicOnion/5.1.2": {
+        "dependencies": {
+          "MagicOnion.Client": "5.1.2",
+          "MagicOnion.Server": "5.1.2"
+        }
+      },
       "MagicOnion.Abstractions/5.1.2": {
         "dependencies": {
           "Grpc.Core.Api": "2.51.0",
@@ -109,6 +116,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/MagicOnion.Abstractions.dll": {
+            "assemblyVersion": "5.1.2.0",
+            "fileVersion": "5.1.2.0"
+          }
+        }
+      },
+      "MagicOnion.Client/5.1.2": {
+        "dependencies": {
+          "Grpc.Net.Client": "2.51.0",
+          "MagicOnion.Abstractions": "5.1.2",
+          "MagicOnion.Shared": "5.1.2"
+        },
+        "runtime": {
+          "lib/net7.0/MagicOnion.Client.dll": {
             "assemblyVersion": "5.1.2.0",
             "fileVersion": "5.1.2.0"
           }
@@ -285,7 +305,16 @@
       "System.Reflection.Emit/4.6.0": {},
       "System.Reflection.Emit.Lightweight/4.6.0": {},
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {},
-      "System.Threading.Tasks.Extensions/4.5.3": {}
+      "System.Threading.Tasks.Extensions/4.5.3": {},
+      "Shared/1.0.0": {
+        "dependencies": {
+          "MagicOnion": "5.1.2",
+          "MagicOnion.Server": "5.1.2"
+        },
+        "runtime": {
+          "Shared.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -357,12 +386,26 @@
       "path": "grpc.tools/2.51.0",
       "hashPath": "grpc.tools.2.51.0.nupkg.sha512"
     },
+    "MagicOnion/5.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lKclxvf3Dw+2UQBgrkOSA5ml1P/dsnxAyUYiw9KRiDrgeWv2n31rE1Los6Q2VpsmdHiqnNRoGgReZstbChXG0g==",
+      "path": "magiconion/5.1.2",
+      "hashPath": "magiconion.5.1.2.nupkg.sha512"
+    },
     "MagicOnion.Abstractions/5.1.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-S84uiolK7Yd/RazzWlE3H8IT1hD7c+V1JgTzuGToTvUWBcK2z0iigecYC1llUmF4VqRc8BH2apuhG+bDjVlYFg==",
       "path": "magiconion.abstractions/5.1.2",
       "hashPath": "magiconion.abstractions.5.1.2.nupkg.sha512"
+    },
+    "MagicOnion.Client/5.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ebw6j4Bt9QGIRwHR16r4RHxKZwtbWQdn6MKsVsKlSHnsphWSd6d6RAimH8WAtqyEnZJGd9Pb3VUf4rCOtXbydQ==",
+      "path": "magiconion.client/5.1.2",
+      "hashPath": "magiconion.client.5.1.2.nupkg.sha512"
     },
     "MagicOnion.Server/5.1.2": {
       "type": "package",
@@ -552,6 +595,11 @@
       "sha512": "sha512-+MvhNtcvIbqmhANyKu91jQnvIRVSTiaOiFNfKWwXGHG48YAb4I/TyH8spsySiPYla7gKal5ZnF3teJqZAximyQ==",
       "path": "system.threading.tasks.extensions/4.5.3",
       "hashPath": "system.threading.tasks.extensions.4.5.3.nupkg.sha512"
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

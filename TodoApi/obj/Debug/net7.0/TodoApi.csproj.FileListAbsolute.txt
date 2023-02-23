@@ -95,3 +95,6 @@ C:\Users\simil\GitProject\TodoApi\TodoApi\obj\Debug\net7.0\refint\TodoApi.dll
 C:\Users\simil\GitProject\TodoApi\TodoApi\obj\Debug\net7.0\TodoApi.pdb
 C:\Users\simil\GitProject\TodoApi\TodoApi\obj\Debug\net7.0\TodoApi.genruntimeconfig.cache
 C:\Users\simil\GitProject\TodoApi\TodoApi\obj\Debug\net7.0\ref\TodoApi.dll
+C:\Users\simil\GitProject\TodoApi\TodoApi\bin\Debug\net7.0\MagicOnion.Client.dll
+C:\Users\simil\GitProject\TodoApi\TodoApi\bin\Debug\net7.0\Shared.dll
+C:\Users\simil\GitProject\TodoApi\TodoApi\bin\Debug\net7.0\Shared.pdb

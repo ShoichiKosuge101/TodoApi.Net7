@@ -141,6 +141,19 @@
           "build/Grpc.Tools.targets": {}
         }
       },
+      "MagicOnion/5.1.2": {
+        "type": "package",
+        "dependencies": {
+          "MagicOnion.Client": "5.1.2",
+          "MagicOnion.Server": "5.1.2"
+        },
+        "compile": {
+          "lib/net7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net7.0/_._": {}
+        }
+      },
       "MagicOnion.Abstractions/5.1.2": {
         "type": "package",
         "dependencies": {
@@ -154,6 +167,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/MagicOnion.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MagicOnion.Client/5.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Net.Client": "2.34.0",
+          "MagicOnion.Abstractions": "5.1.2",
+          "MagicOnion.Shared": "5.1.2"
+        },
+        "compile": {
+          "lib/net7.0/MagicOnion.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/MagicOnion.Client.dll": {
             "related": ".xml"
           }
         }
@@ -587,6 +618,20 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "MagicOnion": "5.1.2",
+          "MagicOnion.Server": "5.1.2"
+        },
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
@@ -837,6 +882,20 @@
         "tools/windows_x86/protoc.exe"
       ]
     },
+    "MagicOnion/5.1.2": {
+      "sha512": "lKclxvf3Dw+2UQBgrkOSA5ml1P/dsnxAyUYiw9KRiDrgeWv2n31rE1Los6Q2VpsmdHiqnNRoGgReZstbChXG0g==",
+      "type": "package",
+      "path": "magiconion/5.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/_._",
+        "lib/net7.0/_._",
+        "magiconion.5.1.2.nupkg.sha512",
+        "magiconion.nuspec"
+      ]
+    },
     "MagicOnion.Abstractions/5.1.2": {
       "sha512": "S84uiolK7Yd/RazzWlE3H8IT1hD7c+V1JgTzuGToTvUWBcK2z0iigecYC1llUmF4VqRc8BH2apuhG+bDjVlYFg==",
       "type": "package",
@@ -849,6 +908,26 @@
         "lib/netstandard2.0/MagicOnion.Abstractions.xml",
         "magiconion.abstractions.5.1.2.nupkg.sha512",
         "magiconion.abstractions.nuspec"
+      ]
+    },
+    "MagicOnion.Client/5.1.2": {
+      "sha512": "ebw6j4Bt9QGIRwHR16r4RHxKZwtbWQdn6MKsVsKlSHnsphWSd6d6RAimH8WAtqyEnZJGd9Pb3VUf4rCOtXbydQ==",
+      "type": "package",
+      "path": "magiconion.client/5.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/MagicOnion.Client.dll",
+        "lib/net6.0/MagicOnion.Client.xml",
+        "lib/net7.0/MagicOnion.Client.dll",
+        "lib/net7.0/MagicOnion.Client.xml",
+        "lib/netstandard2.0/MagicOnion.Client.dll",
+        "lib/netstandard2.0/MagicOnion.Client.xml",
+        "lib/netstandard2.1/MagicOnion.Client.dll",
+        "lib/netstandard2.1/MagicOnion.Client.xml",
+        "magiconion.client.5.1.2.nupkg.sha512",
+        "magiconion.client.nuspec"
       ]
     },
     "MagicOnion.Server/5.1.2": {
@@ -1538,6 +1617,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1545,7 +1629,8 @@
       "Grpc.AspNetCore >= 2.51.0",
       "MagicOnion.Server >= 5.1.2",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 7.0.3",
-      "Microsoft.EntityFrameworkCore.InMemory >= 7.0.3"
+      "Microsoft.EntityFrameworkCore.InMemory >= 7.0.3",
+      "Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1579,7 +1664,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\simil\\GitProject\\TodoApi\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\simil\\GitProject\\TodoApi\\Shared\\Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

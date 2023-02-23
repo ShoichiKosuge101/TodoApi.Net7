@@ -3,8 +3,21 @@ using MagicOnion;
 using MagicOnion.Server;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Grpc.Core;
+using Microsoft.AspNetCore.Server.Kestrel.Https;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Shared.Model.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5001, listenOptions =>
+    {
+        listenOptions.Protocols = HttpProtocols.Http2;
+        listenOptions.UseHttps();
+    });
+});
 
 // DIコンテナへの依存注入
 builder.Services.AddDbContext<TodoDb>(opt => opt.UseInMemoryDatabase("TodoList"));
@@ -17,7 +30,12 @@ builder.Services.AddMagicOnion();
 var app = builder.Build();
 
 // Call MagicOnion
+var serviceOptions = new MagicOnionOptions();
+serviceOptions.IsReturnExceptionStackTraceInErrorDetail =true;
 app.MapMagicOnionService();
+app.MapGrpcService<IMyFirstService>();
+// app.UseHsts();
+// app.UseHttpsRedirection();
 
 // MapGroup
 var todoItems = app.MapGroup("/todoitems");

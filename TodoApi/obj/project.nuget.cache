@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "73ma6z699kRnmH1F6hU0IL0vANWFO8Gun3MvoC+yrXD9WeBk6OMReS3zDWD32zmODAQIbOHzklYtloWZU25Ebg==",
+  "dgSpecHash": "rl21aiVs6v0d+EZzJP5Cz67/yrhDNqi3UweNBd2ZbqE1jPb1vnvSCZ+Tslb/ioN4Jpd2yAfu6T2n4EaixjYxlw==",
   "success": true,
   "projectFilePath": "C:\\Users\\simil\\GitProject\\TodoApi\\TodoApi\\TodoApi.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,9 @@
     "C:\\Users\\simil\\.nuget\\packages\\grpc.net.clientfactory\\2.51.0\\grpc.net.clientfactory.2.51.0.nupkg.sha512",
     "C:\\Users\\simil\\.nuget\\packages\\grpc.net.common\\2.51.0\\grpc.net.common.2.51.0.nupkg.sha512",
     "C:\\Users\\simil\\.nuget\\packages\\grpc.tools\\2.51.0\\grpc.tools.2.51.0.nupkg.sha512",
+    "C:\\Users\\simil\\.nuget\\packages\\magiconion\\5.1.2\\magiconion.5.1.2.nupkg.sha512",
     "C:\\Users\\simil\\.nuget\\packages\\magiconion.abstractions\\5.1.2\\magiconion.abstractions.5.1.2.nupkg.sha512",
+    "C:\\Users\\simil\\.nuget\\packages\\magiconion.client\\5.1.2\\magiconion.client.5.1.2.nupkg.sha512",
     "C:\\Users\\simil\\.nuget\\packages\\magiconion.server\\5.1.2\\magiconion.server.5.1.2.nupkg.sha512",
     "C:\\Users\\simil\\.nuget\\packages\\magiconion.shared\\5.1.2\\magiconion.shared.5.1.2.nupkg.sha512",
     "C:\\Users\\simil\\.nuget\\packages\\messagepack\\2.2.85\\messagepack.2.2.85.nupkg.sha512",

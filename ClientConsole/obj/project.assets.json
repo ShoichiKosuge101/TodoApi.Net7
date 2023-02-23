@@ -2,6 +2,64 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "Grpc.AspNetCore.Server/2.34.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Net.Common": "2.34.0"
+        },
+        "compile": {
+          "lib/net5.0/Grpc.AspNetCore.Server.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Grpc.AspNetCore.Server.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Grpc.Core/2.46.6": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Core.Api": "2.46.6",
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Grpc.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Grpc.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/libgrpc_csharp_ext.arm64.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-x64/native/libgrpc_csharp_ext.x64.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/libgrpc_csharp_ext.x64.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/grpc_csharp_ext.x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/grpc_csharp_ext.x86.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
       "Grpc.Core.Api/2.51.0": {
         "type": "package",
         "dependencies": {
@@ -51,6 +109,19 @@
           }
         }
       },
+      "MagicOnion/5.1.2": {
+        "type": "package",
+        "dependencies": {
+          "MagicOnion.Client": "5.1.2",
+          "MagicOnion.Server": "5.1.2"
+        },
+        "compile": {
+          "lib/net7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net7.0/_._": {}
+        }
+      },
       "MagicOnion.Abstractions/5.1.2": {
         "type": "package",
         "dependencies": {
@@ -82,6 +153,25 @@
         },
         "runtime": {
           "lib/net7.0/MagicOnion.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MagicOnion.Server/5.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.34.0",
+          "Grpc.Core.Api": "2.35.0",
+          "MagicOnion.Abstractions": "5.1.2",
+          "MagicOnion.Shared": "5.1.2"
+        },
+        "compile": {
+          "lib/net7.0/MagicOnion.Server.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/MagicOnion.Server.dll": {
             "related": ".xml"
           }
         }
@@ -224,10 +314,70 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "MagicOnion": "5.1.2",
+          "MagicOnion.Server": "5.1.2"
+        },
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Grpc.AspNetCore.Server/2.34.0": {
+      "sha512": "V937xHNfIQM6X2dx8ManMK+xfkjmxwVfL/kWa+kZiLnf4E0VYd/A2ocrKDnn7EQk7SV2tkCD1+fUsG3qRsKNmQ==",
+      "type": "package",
+      "path": "grpc.aspnetcore.server/2.34.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grpc.aspnetcore.server.2.34.0.nupkg.sha512",
+        "grpc.aspnetcore.server.nuspec",
+        "lib/net5.0/Grpc.AspNetCore.Server.dll",
+        "lib/net5.0/Grpc.AspNetCore.Server.pdb",
+        "lib/net5.0/Grpc.AspNetCore.Server.xml",
+        "lib/netcoreapp3.0/Grpc.AspNetCore.Server.dll",
+        "lib/netcoreapp3.0/Grpc.AspNetCore.Server.pdb",
+        "lib/netcoreapp3.0/Grpc.AspNetCore.Server.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Core/2.46.6": {
+      "sha512": "ZoRg3KmOJ2urTF4+u3H0b1Yv10xzz2Y/flFWS2tnRmj8dbKLeiJaSRqu4LOBD3ova90evqLkVZ85kUkC4JT4lw==",
+      "type": "package",
+      "path": "grpc.core/2.46.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net45/Grpc.Core.targets",
+        "buildTransitive/net45/Grpc.Core.targets",
+        "grpc.core.2.46.6.nupkg.sha512",
+        "grpc.core.nuspec",
+        "lib/net45/Grpc.Core.dll",
+        "lib/net45/Grpc.Core.pdb",
+        "lib/net45/Grpc.Core.xml",
+        "lib/netstandard1.5/Grpc.Core.dll",
+        "lib/netstandard1.5/Grpc.Core.pdb",
+        "lib/netstandard1.5/Grpc.Core.xml",
+        "lib/netstandard2.0/Grpc.Core.dll",
+        "lib/netstandard2.0/Grpc.Core.pdb",
+        "lib/netstandard2.0/Grpc.Core.xml",
+        "packageIcon.png",
+        "runtimes/linux-arm64/native/libgrpc_csharp_ext.arm64.so",
+        "runtimes/linux-x64/native/libgrpc_csharp_ext.x64.so",
+        "runtimes/osx-x64/native/libgrpc_csharp_ext.x64.dylib",
+        "runtimes/win-x64/native/grpc_csharp_ext.x64.dll",
+        "runtimes/win-x86/native/grpc_csharp_ext.x86.dll"
+      ]
+    },
     "Grpc.Core.Api/2.51.0": {
       "sha512": "WUYCnxZKfdBWCKNs08lWFRoTjESt3iyFDthsZu5KcWguZ4OnnXrTu/K5mIdO+R9dUhuw5Xm1ygUrI1e2q8d1YA==",
       "type": "package",
@@ -308,6 +458,20 @@
         "packageIcon.png"
       ]
     },
+    "MagicOnion/5.1.2": {
+      "sha512": "lKclxvf3Dw+2UQBgrkOSA5ml1P/dsnxAyUYiw9KRiDrgeWv2n31rE1Los6Q2VpsmdHiqnNRoGgReZstbChXG0g==",
+      "type": "package",
+      "path": "magiconion/5.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/_._",
+        "lib/net7.0/_._",
+        "magiconion.5.1.2.nupkg.sha512",
+        "magiconion.nuspec"
+      ]
+    },
     "MagicOnion.Abstractions/5.1.2": {
       "sha512": "S84uiolK7Yd/RazzWlE3H8IT1hD7c+V1JgTzuGToTvUWBcK2z0iigecYC1llUmF4VqRc8BH2apuhG+bDjVlYFg==",
       "type": "package",
@@ -340,6 +504,22 @@
         "lib/netstandard2.1/MagicOnion.Client.xml",
         "magiconion.client.5.1.2.nupkg.sha512",
         "magiconion.client.nuspec"
+      ]
+    },
+    "MagicOnion.Server/5.1.2": {
+      "sha512": "jQ1bIUVEovA4C/gm4U+05sAzWdU7PJk35hhLTU8LmzN8RGzr9fr/2ck+tOxX0/VYd/B/tyNKrDq5XCHDv2X0Ew==",
+      "type": "package",
+      "path": "magiconion.server/5.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/MagicOnion.Server.dll",
+        "lib/net6.0/MagicOnion.Server.xml",
+        "lib/net7.0/MagicOnion.Server.dll",
+        "lib/net7.0/MagicOnion.Server.xml",
+        "magiconion.server.5.1.2.nupkg.sha512",
+        "magiconion.server.nuspec"
       ]
     },
     "MagicOnion.Shared/5.1.2": {
@@ -631,12 +811,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Grpc.Core >= 2.46.6",
       "Grpc.Net.Client >= 2.51.0",
-      "MagicOnion.Client >= 5.1.2"
+      "MagicOnion.Client >= 5.1.2",
+      "Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -670,7 +857,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\simil\\GitProject\\TodoApi\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\simil\\GitProject\\TodoApi\\Shared\\Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -683,6 +874,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Grpc.Core": {
+            "target": "Package",
+            "version": "[2.46.6, )"
+          },
           "Grpc.Net.Client": {
             "target": "Package",
             "version": "[2.51.0, )"
