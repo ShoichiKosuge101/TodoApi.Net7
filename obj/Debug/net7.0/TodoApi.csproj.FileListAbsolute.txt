@@ -30,3 +30,17 @@ C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore
 C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\simil\GitProject\TodoApi\obj\Debug\net7.0\TodoApi.csproj.CopyComplete
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Tools\Postman\TodoApi.Net7.postman_collection.json
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Grpc.AspNetCore.Server.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Grpc.Core.Api.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Grpc.Net.Client.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Grpc.Net.ClientFactory.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Grpc.Net.Common.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\MagicOnion.Abstractions.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\MagicOnion.Server.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\MagicOnion.Shared.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\MessagePack.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\MessagePack.Annotations.dll
+C:\Users\simil\GitProject\TodoApi\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll

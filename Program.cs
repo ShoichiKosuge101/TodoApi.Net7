@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using MagicOnion;
+using MagicOnion.Server;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +8,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<TodoDb>(opt => opt.UseInMemoryDatabase("TodoList"));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+// MagicOnion
+builder.Services.AddGrpc();
+builder.Services.AddMagicOnion();
+
 var app = builder.Build();
+
+// Call MagicOnion
+app.MapMagicOnionService();
 
 // MapGroup
 var todoItems = app.MapGroup("/todoitems");
