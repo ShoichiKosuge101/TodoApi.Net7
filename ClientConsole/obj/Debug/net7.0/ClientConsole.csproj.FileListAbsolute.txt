@@ -1,0 +1,15 @@
+C:\Users\simil\GitProject\TodoApi\ClientConsole\bin\Debug\net7.0\ClientConsole.exe
+C:\Users\simil\GitProject\TodoApi\ClientConsole\bin\Debug\net7.0\ClientConsole.deps.json
+C:\Users\simil\GitProject\TodoApi\ClientConsole\bin\Debug\net7.0\ClientConsole.runtimeconfig.json
+C:\Users\simil\GitProject\TodoApi\ClientConsole\bin\Debug\net7.0\ClientConsole.dll
+C:\Users\simil\GitProject\TodoApi\ClientConsole\bin\Debug\net7.0\ClientConsole.pdb
+C:\Users\simil\GitProject\TodoApi\ClientConsole\obj\Debug\net7.0\ClientConsole.csproj.AssemblyReference.cache
+C:\Users\simil\GitProject\TodoApi\ClientConsole\obj\Debug\net7.0\ClientConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simil\GitProject\TodoApi\ClientConsole\obj\Debug\net7.0\ClientConsole.AssemblyInfoInputs.cache
+C:\Users\simil\GitProject\TodoApi\ClientConsole\obj\Debug\net7.0\ClientConsole.AssemblyInfo.cs
+C:\Users\simil\GitProject\TodoApi\ClientConsole\obj\Debug\net7.0\ClientConsole.csproj.CoreCompileInputs.cache
+C:\Users\simil\GitProject\TodoApi\ClientConsole\obj\Debug\net7.0\ClientConsole.dll
+C:\Users\simil\GitProject\TodoApi\ClientConsole\obj\Debug\net7.0\refint\ClientConsole.dll
+C:\Users\simil\GitProject\TodoApi\ClientConsole\obj\Debug\net7.0\ClientConsole.pdb
+C:\Users\simil\GitProject\TodoApi\ClientConsole\obj\Debug\net7.0\ClientConsole.genruntimeconfig.cache
+C:\Users\simil\GitProject\TodoApi\ClientConsole\obj\Debug\net7.0\ref\ClientConsole.dll
