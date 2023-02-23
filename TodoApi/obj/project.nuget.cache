@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2khicnTgaYhzg5ikss1Ekqhahr2ieWiSF6/sTnHY9s8zBpr6eINl6261GuI+kZp/1bTYN1wM+4cVV/X5eQweDA==",
+  "dgSpecHash": "73ma6z699kRnmH1F6hU0IL0vANWFO8Gun3MvoC+yrXD9WeBk6OMReS3zDWD32zmODAQIbOHzklYtloWZU25Ebg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\simil\\GitProject\\TodoApi\\TodoApi.csproj",
+  "projectFilePath": "C:\\Users\\simil\\GitProject\\TodoApi\\TodoApi\\TodoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\simil\\.nuget\\packages\\google.protobuf\\3.21.5\\google.protobuf.3.21.5.nupkg.sha512",
     "C:\\Users\\simil\\.nuget\\packages\\grpc.aspnetcore\\2.51.0\\grpc.aspnetcore.2.51.0.nupkg.sha512",

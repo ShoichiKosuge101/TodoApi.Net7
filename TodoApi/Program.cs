@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using MagicOnion;
 using MagicOnion.Server;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
