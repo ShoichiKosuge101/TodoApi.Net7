@@ -8,7 +8,16 @@ Console.WriteLine("Hello, World!");
 // for not .NET Standard2.1
 // var channel = new Channel("localhost", 5001, new SslCredentials());
 
-var channel = GrpcChannel.ForAddress("https://localhost:5001");
+var option = new GrpcChannelOptions()
+{
+    HttpClient = new HttpClient(new HttpClientHandler
+    {
+        // SSL証明書の検証で常に True を返す
+        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator,
+    })
+};
+
+var channel = GrpcChannel.ForAddress("https://localhost:5001", option);
 
 // Client Impl
 // create proxy to call the server transparently
